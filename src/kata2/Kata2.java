@@ -10,15 +10,14 @@ import java.util.Map;
 public class Kata2 {
 
     public static void main(String[] args) {
-        Integer[] data = {0, 1, 2, 3, 1, 2, 5, 8, 9, 1, 4, 3, 2, 0, 8};
-        String[] data2 = {"facundo", "ana", "pedro", "pepe", "maria", "pepe", "maria", "pedro"};
+        String[] data2 = {"Facundo", "Ana", "Pedro", "Pepe", "Maria", "Pepe", "Maria", "Pedro", "Rosa", "Rosa"};
         
-        Histogram meta_histogram = new Histogram(data);
-        Map<Integer, Integer> histogram = meta_histogram.getHistogram();
+        Histogram meta_histogram = new Histogram(data2);
+        Map<String, Integer> histogram = meta_histogram.getHistogram();
         
-        Iterator<Map.Entry<Integer, Integer>> entries = histogram.entrySet().iterator();
+        Iterator<Map.Entry<String, Integer>> entries = histogram.entrySet().iterator();
         while(entries.hasNext()){
-            Map.Entry<Integer, Integer> entry = entries.next();
+            Map.Entry<String, Integer> entry = entries.next();
             System.out.println("key = " + entry.getKey() + ", value = " + entry.getValue());
         }
         
